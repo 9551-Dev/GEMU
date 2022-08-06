@@ -1,11 +1,4 @@
---[[
-    * api for easy interaction with drawing characters
-
-    * single file implementation of GuiH pixelbox api
-]]
-
 local EXPECT = require("cc.expect").expect
-
 local PIXELBOX = {}
 local OBJECT = {}
 local api = {}
@@ -19,7 +12,6 @@ for i = 0, 15 do
     graphic.to_blit[2^i] = chars:sub(i + 1, i + 1)
     graphic.logify [2^i] = i
 end
-
 
 function PIXELBOX.INDEX_SYMBOL_CORDINATION(tbl,x,y,val)
     tbl[x+y*2-2] = val
