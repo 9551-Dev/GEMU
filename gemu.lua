@@ -88,6 +88,8 @@ function OBJECT:push_updates()
                 self.pixels[y][x] = block_color
             end
         end
+        os.queueEvent("yield")
+        s.pullEvent("yield")
     end
     local function add_prev(x,y)
         local prev_data = self.CHARS[y][x]
