@@ -111,8 +111,6 @@ function OBJECT:push_updates()
             self.pixels[y+2][x]   = block_color[5]
             self.pixels[y+2][x+1] = block_color[5]
         end
-        os.queueEvent("yield")
-        os.pullEvent("yield")
     end
     self.UPDATES = api.createNDarray(1)
 end
